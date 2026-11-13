@@ -6,7 +6,24 @@ const noButton = document.getElementById("noButton");
 const hoverSound = document.getElementById("hoverSound");
 const yesSound = document.getElementById("yesSound");
 
+// function showPage(page) {
+//     firstPage.hidden = true;
+//     secondPage.hidden = true;
+//     thirdPage.hidden = true;
 
+//     if ( 
+//         page === "second") {
+//             secondPage.hidden = false
+//         }
+
+//         else if (page === "third") {
+//             thirdPage.hidden = false;
+//         }
+
+//         else { 
+//             firstPage.hidden = false;
+//         }
+// }
 
 yesButton.addEventListener("click", function() {
 
@@ -15,24 +32,25 @@ yesButton.addEventListener("click", function() {
 
     firstPage.hidden = true;
     secondPage.hidden = false;
+    thirdPage.hidden = true;
 
     history.pushState ({ page: "second"}, "", "#second");
 });
 
 window.addEventListener("popstate", function(event){
-    firstPage.hidden = true;
+    firstPage.hidden = false;
     secondPage.hidden = true;
-    thirdPage.hidden = false;
+    thirdPage.hidden = true;
 
-    if (evemt.state && evet.state.page === "second") {
-        secondPage.hidden = false;
-    }
-    else if (event.state && evemt.state.page === "third") {
-        thirdPage.hidden = panse;
-    }
-    else {
-        firstPage.hidden = false;
-    }
+    // if (event.state && evet.state.page === "second") {
+    //     secondPage.hidden = false;
+    // }
+    // else if (event.state && event.state.page === "third") {
+    //     thirdPage.hidden = false;
+    // }
+    // else {
+    //     firstPage.hidden = false;
+    // }
 });
 noButton.addEventListener("click", function() {
     firstPage.hidden = true;
@@ -76,3 +94,8 @@ noButton.addEventListener("touchstart", function(event){
     moveButton();
 }, { passive: false});
 
+history.replaceState (
+    { page: "first" },
+    "",
+    location.pathname + location.search
+);
