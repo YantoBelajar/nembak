@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5c4c8;
+    font-family: "Redaction 50", serif;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+
+}
+
+#firstPage, 
+#secondPage,
+#thirdPage {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+[hidden] {
+    display: none !important;
+}
+
+.divContainer {
+    width: 90%;
+    max-width: 550px;
+    padding: 40px 25px;
+    background-color: #fdf5ec;
+
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgb(255, 255, 255);
+}
+
+.buttonContainer {
+    position: relative;
+    min-height: 300px;
+    margin-top: 20px;
+   
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button {
+   
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+     font-family: "Redaction 50", serif;
+    font-weight: bold;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 6px;
+
+    
+}
+
+#yesButton {
+     background-color: rgb(244, 201, 230);
+   
+     box-shadow: 0 0 30px rgb(228, 126, 177);
+}
+
+#yesButton:hover {
+    background-color: rgb(239, 159, 173);
+    box-shadow: 0 0 40px rgb(246, 109, 137);
+    transform: scale(1.05);
+}
+
+#noButton {
+    background-color: rgb(190, 188, 188);
+    color: rgb(21, 20, 20);
+    position: relative;
+    z-index: 999;
+    box-shadow: 0 0 20px rgb(88, 87, 87);
+    transform: scale(1.05);
+}
+
+.button-slot {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 75px;
+}
+
+img {
+    width: 125px;
+    height: 125px;
+}
+
+    @keyframes pulseText {
+        0% {
+            transform: scale(1); 
+        }
+        50% {
+            transform: scale(1.15);
+        }
+        100% {
+            transform: scale(1);
+        }
+       
+    }
+h1 { animation: pulseText 1.5s ease-in-out infinite;
+
+}
+
+#secondPage .divContainer {
+     width: 90%;
+    max-width: 550px;
+    padding: 40px 25px;
+    background-color: #fdf5ec;
+
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgb(255, 255, 255);
+}
+
+#secondPage h1 {
+    font-size: 100%;
+}
+#secondPage h2 {
+    font-size: 100%;
+}
+
+
+#thirdPage {
+    font-family: serif;
+    background-color: white;
+    display: grid;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    #firstPage,
+    #seccondPage,
+    #thirdPage {
+        width: 100%;
+        min-height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .divContainer {
+        width: 100%;
+        max-width: 400px;
+        padding: 25px 15px;
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .divContainer img {
+        width: 100%;
+        min-height: 280px;
+        gap: 15px;
+    }
+
+    .button-slot{
+        min-height: 60px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
