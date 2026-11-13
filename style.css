@@ -154,7 +154,7 @@ h1 { animation: pulseText 1.5s ease-in-out infinite;
     }
 
     #firstPage,
-    #seccondPage,
+    #secondPage,
     #thirdPage {
         width: 100%;
         min-height: 100vh;
